@@ -8,7 +8,6 @@ while orders:
         break
 
 if orders:
-    str_orders = [str(x) for x in orders]
-    print(f"Orders left: {' '.join(str_orders)}")
+    print(f"Orders left: {' '.join([str(x) for x in orders])}")
 else:
     print("Orders complete")
