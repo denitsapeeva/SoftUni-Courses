@@ -7,5 +7,6 @@ while True:
     guests_at_the_party.add(command)
 left_reservations = reservations.difference(guests_at_the_party)
 print(len(left_reservations))
+
 for guest in sorted(left_reservations):
     print(guest)
