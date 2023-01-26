@@ -26,3 +26,7 @@ while True:
     command = input().split()
 [print(*matrix[row]) for row in range(len(matrix))]
 
+
+
+
+
