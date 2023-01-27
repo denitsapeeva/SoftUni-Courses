@@ -41,3 +41,6 @@ for key, value in directions.items():
 print(best_way)
 print(*best_coordinates, sep="\n")
 print(max_eggs)
+
+
+
