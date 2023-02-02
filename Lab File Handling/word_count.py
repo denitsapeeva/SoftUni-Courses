@@ -12,6 +12,8 @@ for tx in text:
     my_text = [x.lower() for x in tx.split()]
     for word in my_text:
         word = word.lower()
+        if '-' or '?' or '!' or ',' in word:
+            pass
         if word in word_count.keys():
             word_count[word] = word_count[word] + 1
 
