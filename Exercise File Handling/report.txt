@@ -1,0 +1,12 @@
+.docx
+- - -06-File-Handling-Exercise.docx
+.docx#
+- - -.~lock.06-File-Handling-Exercise.docx#
+.py
+- - -directory_traversal.py
+- - -even_lines.py
+- - -file_manipulator.py
+- - -line_numbers.py
+.txt
+- - -output.txt
+- - -text.txt
