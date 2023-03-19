@@ -50,7 +50,7 @@ class Account:
         owner = f"{self.owner}&{other.owner}"
         amount = self.amount + other.amount
         new_account = Account(owner, amount)
-        new_account._transaction = self._transactions + other._transactions
+        new_account._transactions = self._transactions + other._transactions
         return new_account
 
 
