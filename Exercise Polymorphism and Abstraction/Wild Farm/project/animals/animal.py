@@ -23,7 +23,7 @@ class Animal(ABC):
         pass
 
     def feed(self, food):
-        if type(food) not in self.food_eaten:
+        if type(food) not in self.food_that_eats:
             return f"{self.__class__.__name__} does not eat {food.__class__.__name__}!"
         self.weight += food.quantity * self.gain_weight
         self.food_eaten += food.quantity
@@ -36,7 +36,7 @@ class Bird(Animal, ABC):
         self.wing_size = wing_size
 
     def __repr__(self):
-        return f"{self.__class__.__name__} [{self.name}, {self.wing_size}, {self.food_eaten}]"
+        return f"{self.__class__.__name__} [{self.name}, {self.wing_size}, {self.weight}, {self.food_eaten}]"
 
 
 class Mammal(Animal, ABC):

@@ -34,7 +34,6 @@ class Dog(Mammal):
 
 class Cat(Mammal):
 
-
     @staticmethod
     def make_sound():
         return "Meow"
@@ -50,7 +49,6 @@ class Cat(Mammal):
 
 class Tiger(Mammal):
 
-
     @staticmethod
     def make_sound():
         return "ROAR!!!"
@@ -61,4 +59,4 @@ class Tiger(Mammal):
 
     @property
     def gain_weight(self):
-        return 1
+        return 1.00

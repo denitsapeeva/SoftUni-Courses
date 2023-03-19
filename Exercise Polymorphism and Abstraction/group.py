@@ -14,7 +14,7 @@ class Person:
 
 
 class Group:
-    def __init__(self, name, people: List[Person] = []):
+    def __init__(self, name, people: List[Person]):
         self.name = name
         self.people = people
 
@@ -22,8 +22,8 @@ class Group:
         return len(self.people)
 
     def __add__(self, other):
-        new_group = Group(self.name + other.name)
-        new_group.people = self.people + other.people
+        new_group = Group(f"{self.name} {other.name}" ,self.people)
+        new_group.people += other.people
         return new_group
 
     def __repr__(self):
