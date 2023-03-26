@@ -5,7 +5,6 @@ class Cat:
         self.sleepy = False
         self.size = 0
 
-
     def eat(self):
         if self.fed:
             raise Exception('Already fed.')
@@ -18,9 +17,12 @@ class Cat:
             raise Exception('Cannot sleep while hungry')
         self.sleepy = False
 
-import  unittest
+
+import unittest
 
 class CatTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.cat = Cat('Marry')
 
     def test_size_increased_fed_after_eating(self):
         cat = Cat('Mary')
@@ -29,11 +31,10 @@ class CatTests(unittest.TestCase):
         self.assertTrue(cat.fed)
 
     def test_eat_after_fed(self):
-        cat = Cat('Mary')
-        cat.eat()
+        self.cat.eat()
         with self.assertRaises(Exception) as context:
-            cat.eat()
-        self.assertEqual(str(context.exception),'Already fed.')
+            self.cat.eat()
+        self.assertEqual(str(context.exception), 'Already fed.')
 
     def cannot_sleep_in_not_fed(self):
         cat = Cat('Any')
@@ -49,7 +50,3 @@ class CatTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-
-
-
