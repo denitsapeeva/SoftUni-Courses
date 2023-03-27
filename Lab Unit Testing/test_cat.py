@@ -36,17 +36,18 @@ class CatTests(unittest.TestCase):
             self.cat.eat()
         self.assertEqual(str(context.exception), 'Already fed.')
 
-    def cannot_sleep_in_not_fed(self):
+    def test_cannot_sleep_if_not_fed(self):
         cat = Cat('Any')
         with self.assertRaises(Exception) as context:
             cat.sleep()
         self.assertEqual(str(context.exception), 'Cannot sleep while hungry')
 
-    def cannot_sleep_after_sleeping(self):
+    def test_cannot_sleep_after_sleeping(self):
         cat = Cat('Mary')
         cat.eat()
         cat.sleep()
         self.assertFalse(cat.sleepy)
+
 
 if __name__ == '__main__':
     unittest.main()
