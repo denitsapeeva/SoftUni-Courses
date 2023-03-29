@@ -26,6 +26,11 @@ class TestStudent(TestCase):
         self.assertEqual(self.student.courses['english'], 'first')
         self.assertEqual(result, "Course and course notes have been added.")
 
+    def test_if_course_name_is_not_in_courses_with_notes_empty_string(self):
+        result = self.student.enroll('english', 'first')
+        self.assertEqual(self.student.courses['english'], 'first')
+        self.assertEqual(result, "Course and course notes have been added.")
+
     def test_if_course_name_not_in_courses(self):
         result = self.student.enroll('english', 'first', 'No')
         self.assertEqual(self.student.courses['english'], [])
