@@ -9,3 +9,5 @@ class Gingerbread(Delicacy):
 
     def details(self):
         return f"Gingerbread {self.name}: 200g - {self.price:.2f}lv."
+
+
